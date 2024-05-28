@@ -38,7 +38,6 @@ class MovieImageSerializer(serializers.ModelSerializer):
 
 
 class MovieSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField(required=False, default=False)
 
     class Meta:
         model = Movie
@@ -48,8 +47,7 @@ class MovieSerializer(serializers.ModelSerializer):
             "description",
             "duration",
             "genres",
-            "actors",
-            "image"
+            "actors"
         )
 
 
